@@ -47,10 +47,11 @@ int main(int argc, char **argv)
 
   	ros::Rate r(rate);
 
+	ROS_INFO("[Global] UAV %i is listening for CDT exchange...", qtnp_uav->uav_id);
+
   	// Main loop.
   	while (n.ok())
   	{
-    	ROS_INFO("[Global] UAV ID: %i", qtnp_uav->uav_id);
     	ros::spinOnce();
     	r.sleep();
   	}
